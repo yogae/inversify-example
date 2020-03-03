@@ -1,19 +1,19 @@
 import { injectable } from 'inversify';
 
 export interface ISpeakService {
-    speak(name: string): void
+    speak(name: string): string
 }
 
 @injectable()
 export class HelloService implements ISpeakService {
     speak(name: string) {
-        console.log(`hello ${name}`);
+        return `hello ${name}`;
     }
 }
 
 @injectable()
 export class HiService implements ISpeakService {
     speak(name: string) {
-        console.log(`hi ${name}`);
+        return `hi ${name}`;
     }
 }

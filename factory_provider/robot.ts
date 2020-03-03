@@ -21,9 +21,9 @@ export class Robot implements IRobot {
     async start(name: string): Promise<void> {
         await this.providerService();
         const hiService = this.factoryService('hi');
-        hiService.speak(name);
+        const hiStr = hiService.speak(name);
 
         const helloService = this.factoryService('hello');
-        helloService.speak(name);
+        const helloStr = helloService.speak(name);
     }
 }
