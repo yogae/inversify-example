@@ -5,4 +5,4 @@ import { IRobot } from './robot';
 
 const robot = container.get<IRobot>(TYPES.Robot);
 
-robot.start();
+robot.start('');
